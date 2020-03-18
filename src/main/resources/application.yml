@@ -1,0 +1,67 @@
+
+socketio:
+  host: localhost
+  port: 9091
+  maxFramePayloadLength: 1048576
+  maxHttpContentLength: 1048576
+  bossCount: 1
+  workCount: 100
+  allowCustomRequests: true
+  upgradeTimeout: 1000000
+  pingTimeout: 6000000
+  pingInterval: 25000
+
+
+broker:
+  machineId: POINT-XX
+
+
+#manage app
+server:
+    port: 8081
+
+#spring
+spring:
+  devtools:
+    restart:
+      enabled: false
+
+  profiles:
+    active: storagesync
+
+  datasource:
+    username: root
+    #    password: ayalost321
+    password:
+    url: jdbc:mysql://localhost:3306/easyim?useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: springboot.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  typeAliasesPackage: com.easyim.entity
+  typeEnumsPackage: com.easyim.entity.enums
+  global-config:
+    db-config:
+      id-type: AUTO
+      field-strategy: not_empty
+      column-underline: true
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      db-type: mysql
+    refresh: true
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+logging:
+  level:
+    com.broker: debug
+    com.easyim.mapper: debug
+    org.springframework.web: WARN
+    org.springframework.security.web: WARN
+    org.springframework.boot.web: WARN

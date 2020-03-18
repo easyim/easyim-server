@@ -1,0 +1,16 @@
+.git/
+target/
+.gradle/
+.settings/
+bin/
+
+logs/
+tmp/
+
+# IntelliJ
+*.ipr
+*.iws
+/.idea
+.classpath
+.project
+*.iml

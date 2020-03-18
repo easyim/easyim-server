@@ -1,0 +1,16 @@
+http://localhost:8081/v1/message/send
+{
+  "body": "222333",
+  "formUser": "admin",
+  "toTarget": "0c461ae3be534c898d795ab20a0ba754",
+  "type": "TEXT",
+  "way": "P2R"
+}
+
+{
+  "body": "222333",
+  "formUser": "admin",
+  "toTarget": "admin",
+  "type": "TEXT",
+  "way": "P2P"
+}

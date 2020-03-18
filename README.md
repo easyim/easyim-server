@@ -1,2 +1,1 @@
-# easyim-server
-easyim-server, 基于springboot开发
+easyim 项目
